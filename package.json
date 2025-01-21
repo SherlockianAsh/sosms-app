@@ -3,22 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "test": "npm run typecheck && npm run lint",
+    "lint": "eslint",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@fontsource/roboto": "^5.1.0",
+    "@fontsource/roboto": "^5.1.1",
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.1.6",
     "@mui/material-nextjs": "^6.1.6",
-    "next": "15.0.2",
-    "react": "^19.0.0-rc-02c0e824-20241028",
-    "react-dom": "^19.0.0-rc-02c0e824-20241028"
+    "next": "^15.1.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
